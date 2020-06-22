@@ -95,9 +95,9 @@ def train():
     for times in range(5000):
         inputs, sparse_targets, seq_len= get_next_batch(512)
         print('times=', times, ' inputs.shape=', inputs.shape, ' sparse_targets.shape=', sparse_targets.shape, ' seq_len.shape=', seq_len.shape)
-        model.fit(batch_x, batch_y, epochs=4)
-        print("y预测=\n", np.argmax(model.predict(batch_x), axis=2))
-        print("y实际=\n", np.argmax(batch_y, axis=2))
+        # model.fit(batch_x, batch_y, epochs=4)
+        # print("y预测=\n", np.argmax(model.predict(batch_x), axis=2))
+        # print("y实际=\n", np.argmax(batch_y, axis=2))
 
         if 0 == times % 10:
             print("save model at times=", times)
